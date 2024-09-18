@@ -71,6 +71,7 @@
     overflow: auto; /* Allows horizontal scrolling if needed */
   }
   .card {
+    color: #F25116;
     width: 417px;
     height: 478px;
     position: relative;
@@ -87,6 +88,15 @@
     border-radius: 1rem;
     object-fit: cover;
   }
+
+  .card-text {
+    color: white;
+  }
+
+  .card-title {
+    color:  white;
+  }
+
   @keyframes breathing {
     0%, 100% {
       transform: scale(1);
@@ -94,4 +104,12 @@
     50% {
       transform: scale(1.05);
     }
+  }
+
+
+
+  .navbarfooter {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    color: #F25116;
+    /* overflow: hidden; Ensures the shadow follows the rounded corners */
   }
