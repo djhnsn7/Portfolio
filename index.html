@@ -1,95 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Donterrio Portfolio</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donterrio Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-    </head>
+    <style>
+        /* Full-page overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1050;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for slides */
+        .slides-container {
+            width: 90%;
+            max-height: 90%;
+            overflow-y: scroll;
+            background-color: #fff;
+            padding: 0; /* Remove padding to make sure slides touch each other */
+            border-radius: 10px;
+        }
+
+        /* Slide styling */
+        .slide {
+            height: 500px; /* Adjust the height as needed */
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #ccc; /* Optional: add a subtle border to differentiate slides */
+        }
+
+        /* Remove margin between slides */
+        .slide:not(:last-child) {
+            border-bottom: none; /* Remove bottom border for the last slide */
+        }
+    </style>
+</head>
 <body>
-   <nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/LogoThumb.png"><img src="/LogoThumb.png" alt="Donterrio"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link pe-3" href="javascript:void(0)">Information+</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li> -->
-      </ul>
-      <form class="d-flex">
-        <!-- <input class="form-control me-2" type="text" placeholder="Search"> -->
-        <button class="btn btn-primary" type="button">Hire Me</button>
-      </form>
-    </div>
-  </div>
-</nav>
 
-<div class="container mt-5">
-    <div class="custom-jumbotron d-flex justify-content-between align-items-center">
-        <div class="role-list">
-            <h1>Product Manager</h1>
-            <h1>Interface Designer</h1>
-            <h1>Graphic Designer</h1>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/LogoThumb.png"><img src="/LogoThumb.png" alt="Donterrio"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link pe-3" href="javascript:void(0)">Information+</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-primary" type="button">Hire Me</button>
+                </form>
+            </div>
         </div>
-        <div class="info-text">
-            Based in Chicago. Creating intuitive digital experiences that merge storytelling with user-centered design. 
-            Skilled in Figma, Adobe Suite, and Coding, I excel in visual composition, collaboration, and problem-solving.
+    </nav>
+
+    <div class="container mt-5">
+        <div class="custom-jumbotron d-flex justify-content-between align-items-center">
+            <div class="role-list">
+                <h1>Product Manager</h1>
+                <h1>Interface Designer</h1>
+                <h1>Graphic Designer</h1>
+            </div>
+            <div class="info-text">
+                Based in Chicago. Creating intuitive digital experiences that merge storytelling with user-centered design. 
+                Skilled in Figma, Adobe Suite, and Coding, I excel in visual composition, collaboration, and problem-solving.
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container mt-3">
-    <h2>Breathing Cards</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="/hand base.png" alt="Card image">
-        <div class="card-img-overlay">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text some example text. Some example text some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+    <div class="container mt-3">
+        <h2>Breathing Cards</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="/Version 01.png" alt="Card image">
+                <div class="card-img-overlay">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text some example text. Some example text some example text.</p>
+                    <a href="javascript:void(0)" class="btn btn-primary open-overlay">See Profile</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/2.png" alt="Card image">
+                <div class="card-img-overlay">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Some example text some example text.</p>
+                    <a href="javascript:void(0)" class="btn btn-primary open-overlay">See Profile</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/3.png" alt="Card image">
+                <div class="card-img-overlay">
+                    <h4 class="card-title">Mark Doe</h4>
+                    <p class="card-text">Some example text some example text. Some example text some example text.</p>
+                    <a href="javascript:void(0)" class="btn btn-primary open-overlay">See Profile</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="/2.png" alt="Card image">
-        <div class="card-img-overlay">
-          <h4 class="card-title">Jane Doe</h4>
-          <p class="card-text">Some example text some example text. Some example text some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/3.png" alt="Card image">
-        <div class="card-img-overlay">
-          <h4 class="card-title">Mark Doe</h4>
-          <p class="card-text">Some example text some example text. Some example text some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-      </div>
     </div>
-  </div>
-  </div>
 
-
-  <nav class="navbarfooter navbar-expand-sm bg-dark navbar-dark fixed-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed bottom</a>
+    <!-- Overlay -->
+    <div class="overlay" id="caseStudyOverlay">
+        <div class="slides-container">
+            <!-- 27 slides -->
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+            <!-- Repeat up to 27 slides -->
+            <div class="slide">Slide 27</div>
+        </div>
     </div>
-  </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
-</body>
+    <nav class="navbarfooter navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fixed bottom</a>
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript to toggle the overlay
+        const overlay = document.getElementById('caseStudyOverlay');
+        const openOverlayButtons = document.querySelectorAll('.open-overlay');
+
+        openOverlayButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlay.style.display = 'flex';
+            });
+        });
+
+        // Close overlay when clicking outside of the container
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
+
