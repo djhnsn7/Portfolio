@@ -25,29 +25,35 @@
 
         /* Container for slides */
         .slides-container {
-            width: 90%;
+            width: 50%;
             max-height: 90%;
             overflow-y: scroll;
             background-color: #fff;
-            padding: 0; /* Remove padding to make sure slides touch each other */
+            padding: 0;
             border-radius: 10px;
+        
         }
 
         /* Slide styling */
         .slide {
-            height: 500px; /* Adjust the height as needed */
-            background-color: #f8f9fa;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid #ccc; /* Optional: add a subtle border to differentiate slides */
+          
+        }
+
+        /* Ensure the image retains its original dimensions */
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            
         }
 
         /* Remove margin between slides */
         .slide:not(:last-child) {
-            border-bottom: none; /* Remove bottom border for the last slide */
+          
         }
     </style>
 </head>
@@ -87,13 +93,13 @@
     </div>
 
     <div class="container mt-3">
-        <h2>Breathing Cards</h2>
+        <h2>The Work</h2>
         <div class="card-container">
             <div class="card">
                 <img src="/Version 01.png" alt="Card image">
                 <div class="card-img-overlay">
-                    <h4 class="card-title">John Doe</h4>
-                    <p class="card-text">Some example text some example text. Some example text some example text.</p>
+                    <h4 class="card-title">WisDOT</h4>
+                    <p class="card-text">Creating a modern design solution that will address users frustrations with navigating DMV websites. </p>
                     <a href="javascript:void(0)" class="btn btn-primary open-overlay">See Profile</a>
                 </div>
             </div>
@@ -120,11 +126,60 @@
     <div class="overlay" id="caseStudyOverlay">
         <div class="slides-container">
             <!-- 27 slides -->
-            <div class="slide">Slide 1</div>
-            <div class="slide">Slide 2</div>
-            <div class="slide">Slide 3</div>
-            <!-- Repeat up to 27 slides -->
-            <div class="slide">Slide 27</div>
+            <div class="slide">
+                <img src="/Wisdot-Port/1.png"></div>
+             <div class="slide">
+                <img src="/Wisdot-Port/2.png"></div>
+                <div class="slide">
+                    <img src="/Wisdot-Port/3.png"></div>
+                    <div class="slide">
+                        <img src="/Wisdot-Port/4.png"></div>
+                        <div class="slide">
+                            <img src="/Wisdot-Port/5.png"></div>
+                            <div class="slide">
+                                <img src="/Wisdot-Port/6.png"></div>
+                                <div class="slide">
+                                    <img src="/Wisdot-Port/7.png"></div>
+                                    <div class="slide">
+                                        <img src="/Wisdot-Port/8.png"></div>
+                                        <div class="slide">
+                                            <img src="/Wisdot-Port/9.png"></div>
+                                            <div class="slide">
+                                                <img src="/Wisdot-Port/10.png"></div>
+                                                <div class="slide">
+                                                    <img src="/Wisdot-Port/11.png"></div>
+                                                    <div class="slide">
+                                                        <img src="/Wisdot-Port/12.png"></div>
+                                                        <div class="slide">
+                                                            <img src="/Wisdot-Port/13.png"></div>
+                                                            <div class="slide">
+                                                                <img src="/Wisdot-Port/14.png"></div>
+                                                                <div class="slide">
+                                                                    <img src="/Wisdot-Port/15.png"></div>
+                                                                    <div class="slide">
+                                                                        <img src="/Wisdot-Port/16.png"></div>
+                                                                        <div class="slide">
+                                                                            <img src="/Wisdot-Port/17.png"></div>
+                                                                            <div class="slide">
+                                                                                <img src="/Wisdot-Port/18.png"></div>
+                                                                                <div class="slide">
+                                                                                    <img src="/Wisdot-Port/19.png"></div>
+                                                                                    <div class="slide">
+                                                                                        <img src="/Wisdot-Port/20.png"></div>
+                                                                                        <div class="slide">
+                                                                                            <img src="/Wisdot-Port/21.png"></div>
+                                                                                            <div class="slide">
+                                                                                                <img src="/Wisdot-Port/22.png"></div>
+                                                                                                <div class="slide">
+                                                                                                    <img src="/Wisdot-Port/23.png"></div>
+                                                                                                    <div class="slide">
+                                                                                                        <img src="/Wisdot-Port/24.png"></div>
+                                                                                                        <div class="slide">
+                                                                                                            <img src="/Wisdot-Port/25.png"></div>
+                                                                                                            <div class="slide">
+                                                                                                                <img src="/Wisdot-Port/26.png"></div>
+                                                                                                                <div class="slide">
+                                                                                                                    <img src="/Wisdot-Port/27.png"></div>
         </div>
     </div>
 
@@ -154,4 +209,3 @@
     </script>
 </body>
 </html>
-
