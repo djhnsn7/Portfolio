@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'SF Pro';
     src: url('/Library/Fonts/SF-Pro.ttf'); /* Replace with your font path */
@@ -14,17 +15,19 @@
     overflow: hidden; /* Ensures the shadow follows the rounded corners */
 }
 .custom-jumbotron {
-   
-    background-image: url('/HeroImg1.png');
+    width: 100vw; /* Full width of the viewport */
+    height: 547px; /* Set the height to 547px */
+    /* background-image: url('/HeroImg1.png');
     background-repeat: no-repeat;
     background-size: cover; 
-    background-position: center; 
-    color: white;
+    background-position: center; */
+    color: rgb(0, 0, 0);
     padding: 2rem;
-    border-radius: 1rem;
-    width: 1321px;
-    height: 471px;
+    margin: 0; /* Ensure no margin around the jumbotron */
+    max-width: 100%; /* Prevents any unwanted constraining */
+    overflow: hidden; /* Ensures background covers the entire area */
 }
+
 
 .role-list h1 {
     font-family: 'SF Pro', sans-serif;
@@ -49,7 +52,7 @@
     font-weight: 300; /* Light */
     font-size: 32px;
     line-height: 45px;
-    color: white;
+    color: rgb(0, 0, 0);
     max-width: 500px;
     text-align: left; /* Ensure left alignment */
 }
@@ -72,15 +75,15 @@
   }
   .card {
     color: F25116;
-    width: 417px;
-    height: 478px;
+    width: 405px;
+    height: 740px;
     position: relative;
     border: none;
     border-radius: 2rem;
     box-shadow: none;
     transition: transform 0.3s ease;
     /* Breathing animation */
-    animation: breathing 8s infinite ease-in-out;
+    /* animation: breathing 8s infinite ease-in-out; */
   }
   .card img {
     width: 100%;
