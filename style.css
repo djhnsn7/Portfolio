@@ -1,4 +1,6 @@
-
+body {
+    background-color: #F2F1F0;
+}
 @font-face {
     font-family: 'SF Pro';
     src: url('/Library/Fonts/SF-Pro.ttf'); /* Replace with your font path */
@@ -75,29 +77,31 @@
   }
   .card {
     color: F25116;
-    width: 405px;
-    height: 740px;
+    width: 439px;
+    height: 478px;
     position: relative;
     border: none;
     border-radius: 2rem;
-    box-shadow: none;
+    box-shadow:inset;
     transition: transform 0.3s ease;
     /* Breathing animation */
     /* animation: breathing 8s infinite ease-in-out; */
   }
   .card img {
+    position: absolute; /* Allows positioning the image within the card */
+    bottom: 0; /* Aligns the image to the bottom of the card */
     width: 100%;
-    height: 100%;
+    height: auto; /* Maintains aspect ratio */
     border-radius: 1rem;
-    object-fit: cover;
-  }
+    object-fit: cover; /* Ensures the image covers the bottom area */
+}
 
   .card-text {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   .card-title {
-    color:  white;
+    color:  rgb(0, 0, 0);
   }
 
   @keyframes breathing {
