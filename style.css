@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -19,6 +22,17 @@ body {
     border-bottom-right-radius: 20px; /* Round bottom right corner */
     overflow: hidden; /* Ensures the shadow follows the rounded corners */
 }
+.btn-primary {
+    background-color: #F25116; /* Orange color */
+    border-color: #F25116;     /* Border matches the background */
+    color: white;              /* White text for contrast */
+}
+
+.btn-primary:hover {
+    background-color: #F2935C; /* Lighter orange for hover state */
+    border-color: #F2935C;
+}
+
 
 .hero-section {
     padding: 0;
@@ -85,6 +99,7 @@ body {
   }
 
   .about {
+    color: #61638C;
     flex: 2;
     padding: 20px;
     background-color: white;
@@ -94,7 +109,7 @@ body {
   }
   .about h1 {
     font-size: 36px;
-    color: #151626;
+    color:#F25116;
   }
   .about p {
     font-size: 16px;
@@ -105,7 +120,7 @@ body {
     margin-top: 20px;
   }
   .resume-button {
-    background-color: #333;
+    background-color: #F25116;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -157,45 +172,51 @@ body {
 .card-container {
     display: flex;
     gap: 20px;
+    justify-content: space-around; /* Adjust to distribute the cards */
 }
+
+
 .card {
     position: relative;
-    cursor: pointer;
+    border-radius: 20px; /* Rounded edges */
+    overflow: hidden; /* Prevents content from overflowing beyond the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    width: 50%;
 }
+
+.card img {
+    width: 100%; /* Ensure the image takes up the full card width */
+    height: auto; /* Keep image aspect ratio */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
 .card-img-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background: rgba(255, 255, 255, 0.5); Semi-transparent background for readability */
+    color: #61638C; /* Ensure the text remains black */
 }
 
-/* Full-page overlay styling */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    overflow-y: auto;
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.overlay-content {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    width: 80%;
-    height: 80%;
-    overflow-y: auto;
-    border-radius: 10px;
+.card-text {
+    font-size: 1em;
+    /* margin-top: 10px; */
 }
 
 /* Close button */
