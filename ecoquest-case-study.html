@@ -5,98 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoQuest Case Study</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-         /* Basic styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
+        <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
 
-.case-study-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full height of the viewport */
-    overflow-y: auto; /* Allow vertical scrolling */
-    margin: 0;
-    padding: 0;
-}
+        .case-study-container {
+            position: relative;
+            width: 100%;
+            height: auto; /* Allow the height to adjust based on content */
+            overflow-x: hidden;
+            overflow-y: auto; /* Allow vertical scrolling */
+            margin: 0;
+            padding: 0;
+        }
 
-.slide {
-    height: 100vh; /* Each slide fills the full height of the viewport */
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0; /* Remove any margin between slides */
-    padding: 0;
-    border: none; /* No border */
-}
+        .slides {
+            display: flex;
+            flex-direction: column;
+        }
 
-.slide img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* Make sure the image covers the entire slide without stretching */
-    display: block;
-}
+        .slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Full width */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
 
-.exit-btn {
-    position: fixed; /* Keep button fixed on the viewport */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    background-color: #f44336; /* Button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 18px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    z-index: 10; /* Keep button above other content */
-}
+        .slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Make sure the image covers the entire container */
+        }
 
-.exit-btn:hover {
-    background-color: #d32f2f; /* Darker color on hover */
-}
+        /* Styling for the exit button */
+        .exit-btn {
+            position: fixed;
+            top: 20px; 
+            right: 20px; 
+            background-color: #f44336; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer;
+            font-size: 18px; 
+            border-radius: 5px; 
+            z-index: 10; 
+        }
 
+        .exit-btn:hover {
+            background-color: #d32f2f; /* Darker color on hover */
+        }
+
+        /* Responsive Design with Media Queries */
+        @media (max-width: 1200px) {
+            .slide img {
+                object-fit: contain; /* Maintain the aspect ratio of images */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide img {
+                width: 100%; 
+                height: auto; 
+                object-fit: contain; /* Ensure images don't stretch */
+            }
+
+            .exit-btn {
+                font-size: 16px; /* Adjust button size */
+                padding: 8px 16px; /* Adjust padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                font-size: 14px; /* Smaller font size */
+            }
+
+            .exit-btn {
+                font-size: 14px; /* Even smaller on very small screens */
+            }
+
+            .slide img {
+                width: 100%; 
+                height: auto; /* Ensure images scale properly */
+            }
+        }
     </style>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="LogoThumb.png">
+                <img src="/LogoThumb.png" alt="Donterrio">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <div class="d-flex ms-auto">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link pe-3" href="#profile">Information+</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-3"> <!-- Add margin to the left -->
+                        <button class="btn btn-primary" type="button" onclick="sendEmail()">Hire!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="case-study-container">
         <button class="exit-btn" onclick="window.location.href='index.html'">Exit</button>
 
         <div class="slides">
             <div class="slide">
-               <img src="/EcoQuest - Case Study (Website)/Eco1.png"></div>
+                <img src="/EcoQuest - Case Study (Website)/Eco1.png" alt="Slide 1">
+            </div>
             <div class="slide">
-                <img src="/EcoQuest - Case Study (Website)/Eco2.png"></div>
-                <div class="slide">
-                    <img src="/EcoQuest - Case Study (Website)/Eco3.png"></div>
-                    <div class="slide">
-                        <img src="/EcoQuest - Case Study (Website)/Eco4.png"></div>
-                        <div class="slide">
-                            <img src="/EcoQuest - Case Study (Website)/Eco5.png"></div>
-                            <div class="slide">
-                                <img src="/EcoQuest - Case Study (Website)/Eco6.png"></div>
-                                <div class="slide">
-                                    <img src="/EcoQuest - Case Study (Website)/Eco7png.png"></div>
-                                    <div class="slide">
-                                        <img src="/EcoQuest - Case Study (Website)/Eco8.png"></div>
-                                        <div class="slide">
-                                            <img src="/EcoQuest - Case Study (Website)/Eco9.png"></div>
-                                            <div class="slide">
-                                                <img src="/EcoQuest - Case Study (Website)/Eco10.png"></div>
-                                                <div class="slide">
-                                                    <img src="/EcoQuest - Case Study (Website)/Eco11.png"></div>
-                                                    <div class="slide">
-                                                        <img src="/EcoQuest - Case Study (Website)/Eco12.png"></div>
-                                                        <div class="slide">
-                                                            <img src="/EcoQuest - Case Study (Website)/Eco13.png.png"></div>
-                                                            <a href="https://www.figma.com/proto/KXCpAwj7YGACVhdBa9n1Hb/ECOQUEST?page-id=35%3A19&node-id=147-7442&node-type=frame&viewport=654%2C777%2C0.25&t=oKhNmcsjUEppC7UK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=147%3A7442" target="_blank" class="slide">
-                                                                <img src="/EcoQuest - Case Study (Website)/Eco14.png" alt="Final Slide">
-                                                            </a>
-                                                                </div>
-    
+                <img src="/EcoQuest - Case Study (Website)/Eco2.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco3.png" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco4.png" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco5.png" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco6.png" alt="Slide 6">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco7png.png" alt="Slide 7">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco8.png" alt="Slide 8">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco9.png" alt="Slide 9">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco10.png" alt="Slide 10">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco11.png" alt="Slide 11">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco12.png" alt="Slide 12">
+            </div>
+            <div class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco13.png" alt="Slide 13">
+            </div>
+            <a href="https://www.figma.com/proto/KXCpAwj7YGACVhdBa9n1Hb/ECOQUEST?page-id=35%3A19&node-id=147-7442&node-type=frame&viewport=654%2C777%2C0.25&t=oKhNmcsjUEppC7UK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=147%3A7442" target="_blank" class="slide">
+                <img src="/EcoQuest - Case Study (Website)/Eco14.png" alt="Final Slide">
+            </a>
+        </div>
+    </div>
 </body>
 </html>

@@ -21,7 +21,13 @@ body {
     border-bottom-left-radius: 20px; /* Round bottom left corner */
     border-bottom-right-radius: 20px; /* Round bottom right corner */
     overflow: hidden; /* Ensures the shadow follows the rounded corners */
+    position: sticky; /* or position: fixed; */
+    top: 0;           /* Stick to the top */
+    z-index: 1000;    /* Ensure it stays on top of other elements */
+    width: 100%;      /* Ensure it spans the full width */
+    background: rgba(242, 241, 240, 0.9); /* Slightly transparent background */
 }
+
 .btn-primary {
     background-color: #F25116; /* Orange color */
     border-color: #F25116;     /* Border matches the background */
@@ -103,8 +109,8 @@ body {
     flex: 2;
     padding: 20px;
     background-color: white;
-    padding: 20px;
-    border-radius: 0 10px 10px 0;
+    padding: 50px;
+    border-radius: 20px;
    
   }
   .about h1 {
@@ -126,7 +132,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    float: right;
+    
     
   }
 
