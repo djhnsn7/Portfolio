@@ -189,11 +189,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     width: 50%;
+  
+
 }
 
 .card img {
     width: 100%; /* Ensure the image takes up the full card width */
     height: auto; /* Keep image aspect ratio */
+    object-fit: cover;
 }
 
 .card:hover {
