@@ -4,109 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Creator Case Study</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        
-         /* Basic styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.case-study-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full height of the viewport */
-    overflow-y: auto; /* Allow vertical scrolling */
-    margin: 0;
-    padding: 0;
-}
-
-.slide {
-    height: 100vh; /* Each slide fills the full height of the viewport */
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0; /* Remove any margin between slides */
-    padding: 0;
-    border: none; /* No border */
-}
-
-.slide img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* Make sure the image covers the entire slide without stretching */
-    display: block;
-}
-
-.exit-btn {
-    position: fixed; /* Keep button fixed on the viewport */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    background-color: #f44336; /* Button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 18px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    z-index: 10; /* Keep button above other content */
-}
-
-.exit-btn:hover {
-    background-color: #d32f2f; /* Darker color on hover */
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS -->
 </head>
 <body>
-    <div class="case-study-container">
-        <button class="exit-btn" onclick="window.location.href='index.html'">Exit</button>
 
-        <div class="slides">
-            <div class="slide">
-               <img src="For Creators/IG1.png"></div>
-            <div class="slide">
-                <img src="For Creators/IG2.png"></div>
-                <div class="slide">
-                    <img src="For Creators/IG3.png"></div>
-                    <div class="slide">
-                        <img src="For Creators/IG4.png"></div>
-                        <div class="slide">
-                            <img src="For Creators/IG5.png"></div>
-                            <div class="slide">
-                                <img src="For Creators/IG6.png"></div>
-                                <div class="slide">
-                                    <img src="For Creators/IG7.png"></div>
-                                    <div class="slide">
-                                        <img src="For Creators/IG8.png"></div>
-                                        <div class="slide">
-                                            <img src="For Creators/IG9.png"></div>
-                                            <div class="slide">
-                                                <img src="For Creators/IG10.png"></div>
-                                                <div class="slide">
-                                                    <img src="For Creators/IG11.png"></div>
-                                                    <div class="slide">
-                                                        <img src="For Creators/IG12.png"></div>
-                                                        <div class="slide">
-                                                            <img src="For Creators/IG13.png"></div>
-                                                            <div class="slide">
-                                                                <img src="For Creators/IG14.png"></div>
-                                                                <div class="slide">
-                                                                    <img src="For Creators/IG15.png"></div>
-                                                                    <div class="slide">
-                                                                        <img src="For Creators/IG16.png"></div>
-                                                                        <div class="slide">
-                                                                            <img src="For Creators/IG17.png"></div>
-                                                                            <div class="slide">
-                                                                                <img src="For Creators/IG18.png"></div>
-                                                                                <div class="slide">
-                                                                                    <img src="For Creators/IG19.png"></div>
-                                                               
-    </div>
-    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="LogoThumb.png" alt="Donterrio" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link pe-3 custom-nav-link" href="index.html#profile">Information+</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <button class="btn btn-primary" type="button" onclick="sendEmail()">Hire!</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <!-- Canva Embed Code -->
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" 
+                        src="https://www.canva.com/design/DAGTM_u07ec/NmjpUlTToyvNCSWEByesAg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-text">©2024 Donterrio. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/donterriolive">Let’s connect on LinkedIn!</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript (for email) -->
+    <script>
+        function sendEmail() {
+            window.location.href = 'mailto:someone@example.com'; // Replace with actual email address
+        }
+    </script>
+
 </body>
 </html>

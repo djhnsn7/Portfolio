@@ -12,32 +12,48 @@ body {
     src: url('/Library/Fonts/SF-Pro.ttf'); /* Replace with your font path */
 }
 
-.navbar .nav-link {
-    color: #F25116;
-  }
-
-  .navbar {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
-    border-bottom-left-radius: 20px; /* Round bottom left corner */
-    border-bottom-right-radius: 20px; /* Round bottom right corner */
-    overflow: hidden; /* Ensures the shadow follows the rounded corners */
-    position: sticky; /* or position: fixed; */
-    top: 0;           /* Stick to the top */
-    z-index: 1000;    /* Ensure it stays on top of other elements */
-    width: 100%;      /* Ensure it spans the full width */
-    background: rgba(242, 241, 240, 0.9); /* Slightly transparent background */
+/* Navbar Custom Styles */
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Drop shadow */
+    border-bottom-left-radius: 20px !important; /* Round bottom left corner */
+    border-bottom-right-radius: 20px !important; /* Round bottom right corner */
+    overflow: hidden !important; /* Ensures the shadow follows the rounded corners */
+    position: sticky !important; /* or position: fixed; */
+    top: 0 !important;           /* Stick to the top */
+    z-index: 1000 !important;    /* Ensure it stays on top of other elements */
+    width: 100% !important;      /* Ensure it spans the full width */
+    background: rgba(242, 241, 240, 0.9) !important; /* Slightly transparent background */
+    cursor: pointer; /* Turns the cursor into a hand when hovering over the navbar */
 }
 
+/* Navbar Link Styles */
+.navbar .nav-link {
+    color: #F25116 !important; /* Set the link color */
+    cursor: pointer; /* Turns the cursor into a hand when hovering over the link */
+}
+
+.navbar .nav-link:hover {
+    color: #F2935C !important; /* Hover color */
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    max-width: 120px !important; /* Adjust logo size */
+}
+
+/* Custom Button Style */
 .btn-primary {
-    background-color: #F25116; /* Orange color */
-    border-color: #F25116;     /* Border matches the background */
-    color: white;              /* White text for contrast */
+    background-color: #F25116 !important; /* Orange color */
+    border-color: #F25116 !important;     /* Border matches the background */
+    color: white !important;              /* White text for contrast */
 }
 
 .btn-primary:hover {
-    background-color: #F2935C; /* Lighter orange for hover state */
-    border-color: #F2935C;
+    background-color: #F2935C !important; /* Lighter orange for hover state */
+    border-color: #F2935C !important;
 }
+
 
 
 .hero-section {
@@ -185,18 +201,18 @@ body {
 .card {
     position: relative;
     border-radius: 20px; /* Rounded edges */
+    flex-direction: column-reverse;
     overflow: hidden; /* Prevents content from overflowing beyond the rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     width: 50%;
-  
-
+    height: 390px;
 }
 
 .card img {
     width: 100%; /* Ensure the image takes up the full card width */
-    height: auto; /* Keep image aspect ratio */
-    object-fit: cover;
+    height: 85%; /* Keep image aspect ratio */
+    object-fit: scale-down;
 }
 
 .card:hover {
@@ -221,6 +237,7 @@ body {
 .card-title {
     font-size: 1.5em;
     font-weight: bold;
+    color: #F25116;
 }
 
 .card-text {
