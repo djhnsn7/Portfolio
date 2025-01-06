@@ -340,7 +340,7 @@ footer a:last-child {
     .card img {
         width: 100%; /* Ensure image scales to the card's width */
         height: auto; /* Maintain aspect ratio */
-        margin-bottom: 10px; /* Add space below the image */
+        margin-bottom: 0px; /* Add space below the image */
     }
 
     .card-content {
