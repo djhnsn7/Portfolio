@@ -331,7 +331,7 @@ footer a:last-child {
     .card {
         width: 100%; /* Make each card take up the full width of the container */
         max-width: 95%; /* Add a bit of padding on the sides */
-        margin: 10px 0; /* Add vertical spacing between cards */
+        margin: 15px 0; /* Add vertical spacing between cards */
         height: auto; /* Adjust height for content */
     }
 
