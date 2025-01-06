@@ -333,6 +333,8 @@ footer a:last-child {
         max-width: 95%; /* Add a bit of padding on the sides */
         margin: 15px 0; /* Add vertical spacing between cards */
         height: auto; /* Adjust height for content */
+        padding: 20px; /* Add padding inside the card */
+        box-sizing: border-box; /* Ensure padding doesn't affect the card's width */
     }
 
     footer {
