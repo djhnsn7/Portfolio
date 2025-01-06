@@ -305,11 +305,10 @@ footer a:last-child {
     }
 
     .hero-img {
-        content: url('HeroImg768.png'); /* Swap the image source */
-        width: 100%;
-        height: auto;
-        max-height: 50vh; /* Optional: limit to 50% of viewport height */
-        object-fit: cover; /* Scale and crop nicely */
+        width: 100%; /* Full width of the screen */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 50vh; /* Optional: limit height to 50% of the viewport height */
+        object-fit: cover; /* Ensure the image scales and crops nicely */
     }
 
     .container {
@@ -334,7 +333,7 @@ footer a:last-child {
         max-width: 95%; /* Add a bit of padding on the sides */
         margin: 10px 0; /* Add vertical spacing between cards */
         height: auto; /* Adjust height for content */
-        padding: 20px; /* Add padding inside the card */
+        padding: 30px; /* Add padding inside the card */
         box-sizing: border-box; /* Ensure padding doesn't affect the card's width */
     }
 
