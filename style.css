@@ -292,16 +292,24 @@ footer a {
 footer a:last-child {
     margin-right: 0; /* Ensure the last link doesn’t have unnecessary margin */
 }
-/* Responsive styles for mobile */
-/* Responsive styles for mobile */
 @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Ensures everything stretches to full width */
+    }
+
     .navbar {
+        display: flex;
         flex-wrap: wrap;
+        flex-direction: column; /* Stack navigation items */
     }
 
     .hero-section {
+        display: flex;
+        flex-direction: column; /* Stack hero section content */
         height: auto;
-        flex-direction: column;
+        align-items: center; /* Center items horizontally */
     }
 
     .hero-img {
@@ -312,23 +320,29 @@ footer a:last-child {
     }
 
     .container {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Stack container content */
         align-items: center;
+        width: 100%; /* Ensure full width */
     }
 
     .profile, .about {
         text-align: center;
-        flex: 1 1 100%;
+        flex: 1 1 auto; /* Allow content to grow or shrink */
+        width: 100%; /* Ensure full width */
     }
 
     .card-container {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Stack cards */
         align-items: center;
         gap: 10px; /* Adjust spacing between cards */
         width: 100%; /* Ensure container spans the full width */
     }
 
     .card {
+        display: flex;
+        flex-direction: column; /* Stack card content */
         width: 100%; /* Make each card take up the full width of the container */
         max-width: 95%; /* Add a bit of padding on the sides */
         margin: 10px 0; /* Add vertical spacing between cards */
@@ -340,7 +354,7 @@ footer a:last-child {
     .card img {
         width: 100%; /* Ensure image scales to the card's width */
         height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0px; /* Add space below the image */
+        margin-bottom: 0; /* Remove space below the image */
         align-self: flex-end;
     }
 
@@ -350,7 +364,7 @@ footer a:last-child {
 
     footer {
         display: flex;
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; /* Stack footer elements */
         align-items: center; /* Center elements horizontally */
         justify-content: center; /* Center elements vertically */
         text-align: center; /* Ensure text alignment is centered */
@@ -361,4 +375,3 @@ footer a:last-child {
         text-decoration: underline; /* Optional: underline the link */
     }
 }
-
