@@ -305,10 +305,11 @@ footer a:last-child {
     }
 
     .hero-img {
-        width: 100%; /* Full width of the screen */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 50vh; /* Optional: limit height to 50% of the viewport height */
-        object-fit: cover; /* Ensure the image scales and crops nicely */
+        content: url('HeroImg768.png'); /* Swap the image source */
+        width: 100%;
+        height: auto;
+        max-height: 50vh; /* Optional: limit to 50% of viewport height */
+        object-fit: cover; /* Scale and crop nicely */
     }
 
     .container {
@@ -333,6 +334,18 @@ footer a:last-child {
         max-width: 95%; /* Add a bit of padding on the sides */
         margin: 10px 0; /* Add vertical spacing between cards */
         height: auto; /* Adjust height for content */
+        padding: 20px; /* Add padding inside the card */
+        box-sizing: border-box; /* Ensure padding doesn't affect the card's width */
+    }
+
+    .card img {
+        width: 100%; /* Ensure image scales to the card's width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add space below the image */
+    }
+
+    .card-content {
+        margin-top: 10px; /* Add space between the image and the text */
     }
 
     footer {
@@ -345,6 +358,7 @@ footer a:last-child {
     }
 
     footer a {
-        text-decoration: underline; /* Optional: remove underline from the link */
+        text-decoration: underline; /* Optional: underline the link */
     }
 }
+
