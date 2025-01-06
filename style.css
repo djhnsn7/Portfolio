@@ -294,7 +294,7 @@ footer a:last-child {
 }
 /* Responsive styles for mobile */
 /* Responsive styles for mobile */
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
     }
@@ -340,8 +340,8 @@ footer a:last-child {
     .card img {
         width: 100%; /* Ensure image scales to the card's width */
         height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove space below the image */
-        padding-bottom: 0; /* Ensure no padding is added below the image */
+        margin-bottom: 0px; /* Add space below the image */
+        align-self: flex-end;
     }
 
     .card-content {
@@ -361,5 +361,4 @@ footer a:last-child {
         text-decoration: underline; /* Optional: underline the link */
     }
 }
-
 
